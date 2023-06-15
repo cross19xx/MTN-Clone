@@ -9,12 +9,15 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    let header = HeaderView(title: "Home")
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupNavigationBar()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
         
-        view.addSubview(header)
+        view.backgroundColor = .systemBackground
+        self.title = "Home"
     }
 }

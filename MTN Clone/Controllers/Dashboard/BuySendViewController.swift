@@ -8,13 +8,16 @@
 import UIKit
 
 class BuySendViewController: UIViewController {
-
-    let header = HeaderView(title: "Buy/Send")
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupNavigationBar()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
         
-        view.addSubview(header)
+        view.backgroundColor = .systemBackground
+        self.title = "Buy/Send"
     }
 }

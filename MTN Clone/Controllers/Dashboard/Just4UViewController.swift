@@ -9,12 +9,15 @@ import UIKit
 
 class Just4UViewController: UIViewController {
 
-    let header = HeaderView(title: "Just4U")
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupNavigationBar()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
         
-        view.addSubview(header)
+        view.backgroundColor = .systemBackground
+        self.title = "Just4u"
     }
 }
